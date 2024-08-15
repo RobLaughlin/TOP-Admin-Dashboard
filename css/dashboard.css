@@ -159,7 +159,7 @@
 }
 
 .nameContainer > .profilePicture {
-    max-width: 48px;
+    width: 48px;
     height: 48px;
     border-radius: 48px;
 }
@@ -167,4 +167,31 @@
 .nameContainer > .name {
     font-size: 20px;
     font-weight: bold;
+}
+
+.greetingContainer {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-weight: bold;
+    margin-bottom: 16px;
+    align-items: center;
+}
+/* Greeting section */
+.greetingContainer > .profilePicture {
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    margin-left: 24px;
+    grid-row: span 2;
+}
+
+.greetingContainer > .greeting {
+    margin-top: auto;
+    margin-bottom: 8px;
+}
+
+.greetingContainer > .nameTag {
+    margin-bottom: auto;
+    font-size: 24px;
 }
