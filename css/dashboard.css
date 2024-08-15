@@ -1,3 +1,4 @@
+/* Fonts */
 @font-face {
     font-family: "Roboto";
     src: url("../fonts/Roboto-Medium.ttf");
@@ -13,6 +14,7 @@
     src: url("Roboto-Bold");
 }
 
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -20,10 +22,11 @@
     font-family: 'Roboto', 'Times New Roman', Times, serif;
 }
 
+/* Layout */
 .dashboard {
     display: grid;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: 20% 80%;
+    grid-template-columns: minmax(300px, 1fr) 4fr;
+    grid-template-rows: 1fr 4fr;
     height: 100vh;
 }
 
@@ -58,4 +61,51 @@
 .trending {
     background-color: blue;
 }
+
+/* Sidebar */
+.sidebar {
+    padding: 8px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* General sidebar items */
+.sidebar > section {
+    margin-bottom: 48px;
+}
+
+.sidebar section .item, .sidebar section .title {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.sidebar section .item {
+    margin-left: 16px;
+    margin-bottom: 16px;
+    font-size: 20px;
+}
+
+.sidebar section .item > .text {
+    margin-left: 24px;
+}
+
+.sidebar .item .icon {
+    width: 32px;
+}
+
+/* Sidebar title */
+.sidebar .title .icon {
+    width: 64px;
+}
+
+.sidebar .title {
+    font-size: 24px;
+}
+
+.sidebar .text {
+    margin-left: 8px;
+}
+
 
