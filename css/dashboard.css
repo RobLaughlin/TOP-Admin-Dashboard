@@ -25,7 +25,7 @@
 /* Layout */
 .dashboard {
     display: grid;
-    grid-template-columns: minmax(300px, 1fr) 4fr;
+    grid-template-columns: 250px 4fr;
     grid-template-rows: 1fr 4fr;
     height: 100vh;
 }
@@ -53,7 +53,7 @@
     grid-template-rows: 1fr 1fr;
 }
 
-.projects {
+.projectsContainer {
     grid-row: 1 / auto-fit;
     background-color: yellowgreen;
 }
@@ -89,6 +89,7 @@
     margin-left: 16px;
     margin-bottom: 16px;
     font-size: 20px;
+    
 }
 
 .sidebar section .item > .text {
@@ -218,4 +219,43 @@
 .header button:hover {
     cursor: pointer;
     background-color: #1fa6ea;
+}
+
+/* Projects section */
+.projectsContainer {
+    display: grid;
+    grid-template-rows: 32px 1fr;
+    grid-template-columns: 1fr;
+    padding: 24px;
+    background-color: #e1e8f0;
+}
+
+.projectsContainer > .title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.projects {
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 16px;
+}
+
+.projects .card {
+    background-color: white;
+    padding: 32px;
+    border-radius: 8px;
+    border-left: 8px solid gold;
+    max-height: 300px;
+}
+
+.projects .card .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 24px;
+}
+
+.projects .card .description {
+    margin-top: 16px;
 }
