@@ -50,7 +50,7 @@
     background-color: #e1e8f0;
     display: grid;
     grid-template-columns: 4fr minmax(350px, 1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
 .projectsContainer {
@@ -62,7 +62,7 @@
     background-color: red;
 }
 
-.trending {
+.trendingContainer {
     background-color: blue;
 }
 
@@ -301,8 +301,62 @@
     flex-direction: column;
     justify-content: space-between;
     flex-grow: 1;
+    height: 350px;
 }
 
 .announcement > .title {
     font-weight: bold;
+}
+
+/* Trending */
+.trendingContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background-color: #e1e8f0;
+}
+
+.trendingContainer > .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 4px;
+}
+
+.trending {
+    margin-top: 12px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    height: 350px;
+}
+
+.trend {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.trend > .defaultProfilePicture {
+    grid-row: span 2;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+}
+
+.trend > .username, .trend > .project {
+    margin-left: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.trend > .project {
+    font-size: 14px;
+    color: gray;
 }
