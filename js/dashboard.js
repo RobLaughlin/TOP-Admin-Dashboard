@@ -14,6 +14,22 @@ const Dashboard = {
         Dashboard.sidebarVisible = !Dashboard.sidebarVisible;
     },
 
+    searchBarTyped: (e) => {
+        const curInput = e.srcElement.value.toLowerCase();
+        let projects = document.querySelectorAll(".projects > .card");
+        projects.forEach(card => {
+            const title = card.getElementsByClassName("title")[0].textContent.toLowerCase();
+            const desc = card.getElementsByClassName("description")[0].textContent.toLowerCase();
+
+            if (title.includes(curInput) || desc.includes(curInput)) {
+                card.style.display = 'flex';
+            }
+            else {
+                card.style.display = 'none';
+            }
+        });
+    },
+
     windowResized: () => {
         if (window.innerWidth > 1200) {
             let sidebar = document.querySelector(".dashboard > .sidebar");
@@ -27,11 +43,14 @@ const Dashboard = {
     },
 
     init: () => {
-        // Add event handler to menu button
+        window.addEventListener("resize", Dashboard.windowResized);
+
         let menuBtn = document.querySelector(".header > .sidebarMenu > img");
         menuBtn.addEventListener("click", Dashboard.menuBtnClicked);
 
-        window.addEventListener("resize", Dashboard.windowResized);
+        let searchBar = document.querySelector(".header .search");
+        searchBar.addEventListener("input", Dashboard.searchBarTyped);
+        
     }
 };
 
