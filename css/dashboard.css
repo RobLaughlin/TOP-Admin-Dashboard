@@ -249,21 +249,24 @@
 }
 
 .projects .card {
+    display: flex;
+    flex-wrap: wrap;
     background-color: white;
     padding: 32px;
     border-radius: 8px;
     border-left: 8px solid gold;
-    max-height: 300px;
+    justify-content: right;
 }
 
 .projects .card .title {
     font-size: 18px;
     font-weight: bold;
-    margin-top: 24px;
+    width: 100%;
 }
 
 .projects .card .description {
     margin-top: 16px;
+    width: 100%;
 }
 
 .projects .card .icons {
@@ -271,7 +274,7 @@
     justify-content: space-evenly;
     align-items: center;
     margin-left: auto;
-    margin-top: 4px;
+    margin-top: 16px;
     width: 150px;
 }
 
