@@ -321,6 +321,11 @@
     height: 350px;
 }
 
+.announcements > .announcement {
+    border-bottom: 1px solid rgb(165, 165, 165);
+    padding-bottom: 8px;
+}
+
 .announcement > .title {
     font-weight: bold;
 }
