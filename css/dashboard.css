@@ -57,6 +57,7 @@
     display: grid;
     grid-template-columns: 4fr minmax(350px, 1fr);
     grid-template-rows: 1fr;
+    cursor: default;
 }
 
 .projectsContainer {
@@ -95,7 +96,11 @@
     margin-left: 16px;
     margin-bottom: 16px;
     font-size: 20px;
-    
+    cursor: pointer;
+}
+
+.sidebar section .item:hover {
+    opacity: 0.6;
 }
 
 .sidebar section .item > .text {
@@ -113,6 +118,7 @@
 
 .sidebar .title {
     font-size: 24px;
+    cursor: default;
 }
 
 .sidebar .text {
@@ -174,6 +180,7 @@
 .nameContainer > .name {
     font-size: 20px;
     font-weight: bold;
+    cursor: default;
 }
 
 .greetingContainer {
@@ -183,6 +190,7 @@
     font-weight: bold;
     margin-bottom: 16px;
     align-items: center;
+    cursor: default;
 }
 
 /* Greeting section */
